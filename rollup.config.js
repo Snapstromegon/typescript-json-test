@@ -8,25 +8,14 @@ import { terser } from "rollup-plugin-terser";
 export default [
   {
     input: "./index.ts",
-    output: { file: "index.js" },
+    output: { file: "index.js", format: "es" },
 
-    plugins: [
-      json(),
-      commonjs(),
-      resolve(),
-      typescript(),
-    ],
+    plugins: [json(), commonjs(), resolve(), typescript()],
   },
   {
     input: "./index.ts",
-    output: { file: "index_tersed.js" },
+    output: { file: "index_tersed.js", format: "es" },
 
-    plugins: [
-      json(),
-      commonjs(),
-      resolve(),
-      typescript(),
-      terser(),
-    ],
+    plugins: [json(), commonjs(), resolve(), typescript(), terser()],
   },
 ];

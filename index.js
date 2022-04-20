@@ -11885,7 +11885,7 @@ __exportStar(module, exports);
 
 var TSON = /*@__PURE__*/getDefaultExportFromCjs(lib);
 
-var stringify = function (input) {
+const stringify = (input) => {
     return TSON.stringify(input);
 };
 
